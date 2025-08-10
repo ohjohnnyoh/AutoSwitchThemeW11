@@ -6,8 +6,7 @@
 [![Lic<img width="1024" height="1024" alt="Иконка переключения режима света и тьмы" src="https://github.com/user-attachments/assets/72c7b76d-abeb-46e6-8b11-57e4258bf245" />
 ense](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
-![Uploading Иконка переключения режима света и тьмы.png…]()
-
+[![image.png](https://i.postimg.cc/P59JRkvd/image.png)](https://postimg.cc/4YvXYq10)
 
 A lightweight Windows application that automatically switches system themes (Light/Dark) based on your schedule or manual commands from the system tray. Works seamlessly in the background with minimal system impact.
 
