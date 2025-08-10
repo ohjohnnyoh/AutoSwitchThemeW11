@@ -1,0 +1,40 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+    
+    - name: Restore dependencies
+      run: dotnet restore AutoSwitchThemeW11/AutoSwitchThemeW11.csproj
+    
+    - name: Build
+      run: dotnet build AutoSwitchThemeW11/AutoSwitchThemeW11.csproj --no-restore --configuration Release
+    
+    - name: Publish
+      run: dotnet publish AutoSwitchThemeW11/AutoSwitchThemeW11.csproj --no-build --configuration Release --output ./publish/win-x64 --runtime win-x64 --self-contained true
+    
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          ./publish/win-x64/AutoSwitchThemeW11.exe
+          ./publish/win-x64/AutoSwitchThemeW11.dll
+          ./publish/win-x64/AutoSwitchThemeW11.deps.json
+        generate_release_notes: true
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

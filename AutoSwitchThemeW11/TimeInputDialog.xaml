@@ -1,0 +1,41 @@
+<Window x:Class="AutoSwitchThemeW11.TimeInputDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Time" Height="150" Width="280" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" WindowStyle="ToolWindow" ShowInTaskbar="False">
+    <Window.Resources>
+        <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{Binding Source={x:Static SystemColors.WindowBrush}, Path=Color}"/>
+        <SolidColorBrush x:Key="WindowTextBrush" Color="{Binding Source={x:Static SystemColors.WindowTextBrush}, Path=Color}"/>
+        <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{Binding Source={x:Static SystemColors.ControlBrush}, Path=Color}"/>
+        <SolidColorBrush x:Key="ControlTextBrush" Color="{Binding Source={x:Static SystemColors.ControlTextBrush}, Path=Color}"/>
+        <SolidColorBrush x:Key="ControlBorderBrush" Color="{Binding Source={x:Static SystemColors.ControlDarkBrush}, Path=Color}"/>
+    </Window.Resources>
+    
+    <Grid Margin="12" Background="{StaticResource WindowBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="TitleText" Margin="0 0 0 8" 
+                   Foreground="{StaticResource WindowTextBrush}"/>
+
+        <TextBox x:Name="TimeBox" Grid.Row="1" Height="26"
+                 Background="{StaticResource WindowBackgroundBrush}"
+                 Foreground="{StaticResource WindowTextBrush}"
+                 BorderBrush="{StaticResource ControlBorderBrush}"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 10 0 0">
+            <Button x:Name="OkButton" Width="80" Margin="0 0 8 0"
+                    Background="{StaticResource ControlBackgroundBrush}"
+                    Foreground="{StaticResource ControlTextBrush}"/>
+            <Button x:Name="CancelButton" Width="80"
+                    Background="{StaticResource ControlBackgroundBrush}"
+                    Foreground="{StaticResource ControlTextBrush}"/>
+        </StackPanel>
+    </Grid>
+</Window>
+
+
+
