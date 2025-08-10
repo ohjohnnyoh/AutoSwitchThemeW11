@@ -132,6 +132,7 @@ Writes to current user registry:
 
 **@oh_johnny**
 - GitHub: [https://github.com/oh_johnny](https://github.com/ohjohnnyoh/)
+- Site: https://ohjohnnyoh.github.io/AutoSwitchThemeW11/
 
 ## 📄 License
 
