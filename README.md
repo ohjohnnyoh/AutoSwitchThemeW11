@@ -3,7 +3,11 @@
 [![Version](https://img.shields.io/badge/version-1.5.1-blue.svg)](https://github.com/oh_johnny/AutoSwitchThemeW11/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-green.svg)](https://www.microsoft.com/windows)
 [![.NET](https://img.shields.io/badge/.NET-8.0-purple.svg)](https://dotnet.microsoft.com/)
-[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+[![Lic<img width="1024" height="1024" alt="Иконка переключения режима света и тьмы" src="https://github.com/user-attachments/assets/72c7b76d-abeb-46e6-8b11-57e4258bf245" />
+ense](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+
+![Uploading Иконка переключения режима света и тьмы.png…]()
+
 
 A lightweight Windows application that automatically switches system themes (Light/Dark) based on your schedule or manual commands from the system tray. Works seamlessly in the background with minimal system impact.
 
