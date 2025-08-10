@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Switch Theme W11 - Автоматическое переключение тем Windows</title>
+    <meta name="description" content="Легкое приложение для автоматического переключения тем Windows (Светлая/Тёмная) по расписанию или вручную из системного трея">
+    <meta name="keywords" content="Windows, тема, переключение, автоматическое, светлая, темная, системный трей">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Auto Switch Theme W11</h1>
+                    <span class="version">v1.5.1</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Возможности</a>
+                    <a href="#download">Скачать</a>
+                    <a href="#screenshots">Скриншоты</a>
+                    <a href="#docs">Документация</a>
+                    <a href="https://github.com/ohjohnnyoh/AutoSwitchThemeW11" target="_blank">GitHub</a>
+                </div>
+                <div class="language-switch">
+                    <button onclick="toggleLanguage()" class="lang-btn">EN</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Автоматическое переключение тем Windows</h1>
+                    <p class="hero-subtitle">Легкое приложение для автоматического переключения тем Windows (Светлая/Тёмная) по расписанию или вручную из системного трея</p>
+                    <div class="hero-buttons">
+                        <a href="#download" class="btn btn-primary">Скачать бесплатно</a>
+                        <a href="https://github.com/ohjohnnyoh/AutoSwitchThemeW11" target="_blank" class="btn btn-secondary">Открыть на GitHub</a>
+                    </div>
+                    <div class="hero-badges">
+                        <span class="badge">Windows 10/11</span>
+                        <span class="badge">Бесплатно</span>
+                        <span class="badge">Open Source</span>
+                        <span class="badge">MIT License</span>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="app-preview">
+                        <div class="tray-icon">🎨</div>
+                        <div class="theme-switch">
+                            <div class="light-theme">☀️ Светлая</div>
+                            <div class="dark-theme">🌙 Тёмная</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Возможности</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🕒</div>
+                        <h3>Автоматическое расписание</h3>
+                        <p>Настройте время переключения на светлую и тёмную темы</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Мгновенное переключение</h3>
+                        <p>Переключайте темы одним кликом из системного трея</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🖥️</div>
+                        <h3>Многомониторная поддержка</h3>
+                        <p>Работает на всех мониторах с автоматической синхронизацией</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Автозапуск</h3>
+                        <p>Автоматический запуск с Windows</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Мультиязычность</h3>
+                        <p>Поддержка русского, английского, французского, немецкого и испанского</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Безопасность</h3>
+                        <p>Безопасная архитектура без сбоев Explorer.exe</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download">
+            <div class="container">
+                <h2>Скачать</h2>
+                <div class="download-options">
+                    <div class="download-card">
+                        <h3>Установщик</h3>
+                        <p>Рекомендуется для большинства пользователей</p>
+                        <ul>
+                            <li>Включает .NET 8 Runtime</li>
+                            <li>Автоматическая установка</li>
+                            <li>Создание ярлыков</li>
+                        </ul>
+                        <a href="https://github.com/ohjohnnyoh/AutoSwitchThemeW11/releases/latest" class="btn btn-primary">Скачать установщик</a>
+                        <span class="file-size">50.8 MB</span>
+                    </div>
+                    <div class="download-card">
+                        <h3>Портативная версия</h3>
+                        <p>Для опытных пользователей</p>
+                        <ul>
+                            <li>Не требует установки</li>
+                            <li>Можно запускать с USB</li>
+                            <li>Требует .NET 8 Runtime</li>
+                        </ul>
+                        <a href="https://github.com/ohjohnnyoh/AutoSwitchThemeW11/releases/latest" class="btn btn-secondary">Скачать portable</a>
+                        <span class="file-size">~15 MB</span>
+                    </div>
+                </div>
+                <div class="system-requirements">
+                    <h3>Системные требования</h3>
+                    <ul>
+                        <li>Windows 10/11 x64</li>
+                        <li>.NET 8 Runtime (включен в установщик)</li>
+                        <li>100 MB свободного места</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="screenshots" class="screenshots">
+            <div class="container">
+                <h2>Скриншоты</h2>
+                <div class="screenshots-grid">
+                    <div class="screenshot">
+                        <div class="screenshot-placeholder">
+                            <div class="tray-menu">
+                                <div class="menu-item">☀️ Светлая тема</div>
+                                <div class="menu-item">🌙 Тёмная тема</div>
+                                <div class="menu-item">📅 Расписание</div>
+                                <div class="menu-item">⚙️ Настройки</div>
+                                <div class="menu-item">❌ Выход</div>
+                            </div>
+                        </div>
+                        <p>Системный трей</p>
+                    </div>
+                    <div class="screenshot">
+                        <div class="screenshot-placeholder">
+                            <div class="time-dialog">
+                                <h4>Установить время</h4>
+                                <input type="time" value="08:00" readonly>
+                                <div class="dialog-buttons">
+                                    <button>OK</button>
+                                    <button>Отмена</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Настройка расписания</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="docs" class="documentation">
+            <div class="container">
+                <h2>Документация</h2>
+                <div class="docs-grid">
+                    <div class="doc-card">
+                        <h3>Быстрый старт</h3>
+                        <ol>
+                            <li>Скачайте и запустите установщик</li>
+                            <li>Приложение появится в системном трее</li>
+                            <li>Правый клик для доступа к меню</li>
+                            <li>Настройте расписание или переключайте вручную</li>
+                        </ol>
+                    </div>
+                    <div class="doc-card">
+                        <h3>Функции меню</h3>
+                        <ul>
+                            <li><strong>Светлая/Тёмная тема</strong> - мгновенное переключение</li>
+                            <li><strong>Расписание</strong> - включить/выключить автоматическое переключение</li>
+                            <li><strong>Время</strong> - установить время переключения</li>
+                            <li><strong>Автозапуск</strong> - запуск с Windows</li>
+                            <li><strong>Язык</strong> - выбор языка интерфейса</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Auto Switch Theme W11</h3>
+                    <p>Автоматическое переключение тем Windows</p>
+                    <p>Версия 1.5.1</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Ссылки</h3>
+                    <ul>
+                        <li><a href="https://github.com/ohjohnnyoh/AutoSwitchThemeW11">GitHub</a></li>
+                        <li><a href="https://github.com/ohjohnnyoh/AutoSwitchThemeW11/issues">Issues</a></li>
+                        <li><a href="https://github.com/ohjohnnyoh/AutoSwitchThemeW11/releases">Releases</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Автор</h3>
+                    <p>@ohjohnnyoh</p>
+                    <p>MIT License</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Auto Switch Theme W11. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
