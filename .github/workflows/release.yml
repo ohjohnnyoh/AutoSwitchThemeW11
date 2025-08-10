@@ -18,10 +18,10 @@ jobs:
         dotnet-version: '8.0.x'
     
     - name: Restore dependencies
-      run: dotnet restore AutoSwitchThemeW11/AutoSwitchThemeW11.csproj
+      run: dotnet restore AutoSwitchThemeW11/AutoSwitchThemeW11.csproj --runtime win-x64
     
     - name: Build
-      run: dotnet build AutoSwitchThemeW11/AutoSwitchThemeW11.csproj --no-restore --configuration Release
+      run: dotnet build AutoSwitchThemeW11/AutoSwitchThemeW11.csproj --no-restore --configuration Release --runtime win-x64
     
     - name: Publish
       run: dotnet publish AutoSwitchThemeW11/AutoSwitchThemeW11.csproj --no-build --configuration Release --output ./publish/win-x64 --runtime win-x64 --self-contained true
