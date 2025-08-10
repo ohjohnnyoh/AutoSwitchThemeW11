@@ -131,7 +131,7 @@ Writes to current user registry:
 ## 👨‍💻 Author
 
 **@oh_johnny**
-- GitHub: [https://github.com/oh_johnny](https://github.com/oh_johnny)
+- GitHub: [https://github.com/oh_johnny](https://github.com/ohjohnnyoh/)
 
 ## 📄 License
 
