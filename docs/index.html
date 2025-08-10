@@ -56,6 +56,33 @@
         .toast.show {
             transform: translateX(0);
         }
+        .screenshot-container {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .screenshot-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .screenshot-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .screenshot-container:hover .screenshot-overlay {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -202,7 +229,7 @@
                     <ul class="space-y-3">
                         <li class="flex items-center">
                             <i class="fas fa-sun text-yellow-500 mr-3"></i>
-                            <span><strong>Light theme / Темная тема:</strong> мгновенная смена темы</span>
+                            <span><strong>Светлая тема / Тёмная тема:</strong> мгновенная смена темы</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-calendar text-blue-500 mr-3"></i>
@@ -220,28 +247,23 @@
                             <i class="fas fa-language text-red-500 mr-3"></i>
                             <span><strong>Язык:</strong> выбор языка интерфейса</span>
                         </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-search text-indigo-500 mr-3"></i>
+                            <span><strong>Диагностика мониторов:</strong> анализ конфигурации экранов</span>
+                        </li>
                     </ul>
                 </div>
                 <div class="bg-white rounded-2xl shadow-xl p-8">
-                    <!-- Здесь будет размещен реальный скриншот -->
-                    <div class="bg-gray-800 rounded-lg p-6 text-center">
-                        <div class="w-8 h-8 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
-                            <i class="fas fa-sun text-yellow-500"></i>
-                        </div>
-                        <p class="text-white mb-4">Значок программы в системном трее</p>
-                        <div class="bg-gray-700 rounded p-3 text-sm text-left">
-                            <div class="text-yellow-400 mb-1">☀️ Light theme</div>
-                            <div class="text-gray-300 mb-1">🌙 Dark theme</div>
-                            <div class="border-t border-gray-600 my-2"></div>
-                            <div class="text-gray-300 mb-1">📅 Расписание: ✓</div>
-                            <div class="text-gray-300 mb-1">☀️ Светлая с 07:00</div>
-                            <div class="text-gray-300 mb-1">🌙 Темная с 19:00</div>
-                            <div class="border-t border-gray-600 my-2"></div>
-                            <div class="text-gray-300 mb-1">🚀 Запуск с Windows</div>
-                            <div class="text-gray-300 mb-1">🌐 Русский</div>
-                            <div class="text-gray-300">🔍 Диагностика мониторов</div>
+                    <div class="screenshot-container">
+                        <img src="images/tray-menu-screenshot.png" alt="Контекстное меню Auto Switch Theme W11" class="w-full h-auto">
+                        <div class="screenshot-overlay">
+                            <div class="bg-white bg-opacity-90 rounded-lg p-4 text-center">
+                                <i class="fas fa-expand-arrows-alt text-2xl text-gray-600 mb-2"></i>
+                                <p class="text-sm text-gray-700">Нажмите для увеличения</p>
+                            </div>
                         </div>
                     </div>
+                    <p class="text-center text-gray-600 mt-4 text-sm">Реальный скриншот контекстного меню приложения</p>
                 </div>
             </div>
         </div>
